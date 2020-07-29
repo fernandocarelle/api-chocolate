@@ -1,0 +1,45 @@
+{
+  "name": "node-02",
+  "version": "1.0.0",
+  "description": "{     \"email\" : \"fernandocarelle@teste.com,     \"name\" : \"Fernando Carelle\",     \"pass\" : \"123456\" }",
+  "main": "index.js",
+  "scripts": {
+    "prepm2": "npm install pm2 -g",
+    "pm2": "pm2 start src/app.js",
+    "lint": "npx eslint --fix .",
+    "start": "node src/app.js",
+    "dev": "npx nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Fernando Carelle",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-error": "0.0.7",
+    "helmet": "^3.23.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
+  }
+}
