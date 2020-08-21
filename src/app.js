@@ -8,12 +8,21 @@ const helmet = require('helmet');
 const routes = require("./routes");
 const logger = require('./helper/logger');
 
+const path = require('path');
+
 const app = express();
 
 app.use(helmet());
 app.use(cors());
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); //para receber arquivos
+
+app.use(
+  '/images',
+  express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
+);
+
 app.use(morgan("dev"));
 app.use(routes);
 
